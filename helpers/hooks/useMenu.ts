@@ -19,6 +19,7 @@ export interface MenuItem {
   Description: string;
   Price: number;
   IsAvailable: Boolean;
+  ImageUrl: string;
   MenuItemOptionSets: [
     {
       IsMasterOptionSet: boolean;
