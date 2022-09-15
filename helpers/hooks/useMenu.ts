@@ -20,12 +20,19 @@ export interface MenuItem {
   Price: number;
   IsAvailable: Boolean;
   ImageUrl: string;
-  MenuItemOptionSets: [
-    {
-      IsMasterOptionSet: boolean;
-      MenuItemOptionSetItems: [{ Name: string }];
-    }
-  ];
+  MenuItemOptionSets: [MenuItemOptionSet];
+}
+
+export interface MenuItemOptionSet {
+  IsMasterOptionSet: boolean;
+  MenuItemOptionSetId: number;
+  MenuItemOptionSetItems: [MenuItemOptionSetItem];
+}
+
+export interface MenuItemOptionSetItem {
+  Name: string;
+  MenuItemOptionSetItemId: number;
+  Price: number;
 }
 
 export const useMenu = () => {

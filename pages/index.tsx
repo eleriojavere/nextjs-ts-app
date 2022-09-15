@@ -1,9 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { StrictMode, useEffect, useState } from "react";
-import useSWR from "swr";
+import { useState } from "react";
 import { useMenu } from "../helpers/hooks/useMenu";
-import MenuItem from "../js/components/MenuItem";
 import MenuSection from "../js/components/MenuSection";
 
 const Home: NextPage = () => {

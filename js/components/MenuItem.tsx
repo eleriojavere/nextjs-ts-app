@@ -4,13 +4,21 @@ import { MenuItem as MenuItemInterface } from "../../helpers/hooks/useMenu";
 
 export default function MenuItem({ data }: { data: MenuItemInterface }) {
   return (
-    <div>
+    <div className="mb-4">
       {data.ImageUrl && (
-        <Image width={60} height={60} src={data.ImageUrl} alt={data.Name} />
+        <Image
+          className="object-cover rounded-lg"
+          width={400}
+          height={300}
+          src={data.ImageUrl}
+          alt={data.Name}
+        />
       )}
-      <h2>{data.Name}</h2>
-      <div>{data.Description}</div>
-      <div>{data.Price}</div>
+      <div className="flex">
+        <h2>{data.Name}</h2>
+        {data.Price !== 0 && <div className="ml-4">{data.Price} €</div>}{" "}
+      </div>
+      <div className="text-sm opacity-80	">{data.Description}</div>
     </div>
   );
 }
