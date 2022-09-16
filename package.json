@@ -7,9 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "style": "npx tailwindcss -i ./styles/entry.css -o ./dist/output.css --watch"
+    "style": "npx tailwindcss -i ./styles/entry.css -o ./dist/output.css --watch",
+    "test": "jest --watch"
   },
   "dependencies": {
+    "jest": "^29.0.3",
     "next": "12.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
