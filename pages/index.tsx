@@ -9,10 +9,8 @@ const Home: NextPage = () => {
   const { menu, isLoading, isError } = useMenu();
 
   if (isLoading) return <p>Loading...</p>;
-  if (!isLoading && isError) return <p>Error</p>;
+  if (isError) return <p>Error</p>;
   if (!menu) return <p>No menu to display</p>;
-
-  console.log("menu", menu);
 
   return (
     <div>
